@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { OwnerRoutingModule } from './owner-routing.module';
-import { OwnerComponent } from './owner.component';
+import { OwnerLoginComponent } from './owner-login/owner-login.component';
 
 
 @NgModule({
   declarations: [
-    OwnerComponent
+    OwnerLoginComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,12 @@
+.main{
+    width: 2000px;
+    height: 800px;
+    background-image: url("/assets/image/hotel6 (2).jpg") ;
+ color: aliceblue;
+
+
+}
+
+.button{
+    background-color: rgb(255, 0, 76);
+}
