@@ -1,0 +1,75 @@
+
+<div class="main">
+    <button mat-raised-button color="warn" (click)="back()">Back</button>
+    <h2 class="head">SignUp-Form</h2>
+    <form class="container" [formGroup]="ownerSignUpForm">
+        <mat-form-field>
+            <mat-label>User Name</mat-label>
+            <input type="text" matInput formControlName="userName" >
+            <span class="err" *ngIf="ownerSignUpForm.get('userName')?.errors?.['maxlength']">Maximum 10 character's
+                allowed</span>
+            <span class="err" *ngIf="ownerSignUpForm.get('userName')?.errors?.['minlength']">Minimum 3 character's
+                allowed</span>
+    
+        </mat-form-field> <br>
+
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input [type]="showPass ? 'text' : 'password'" formControlName="password" matInput >
+            <span class="p-viewer" *ngIf="showPass" (click)="showPassword()">
+            <mat-icon   >visibility</mat-icon></span>
+
+            <span class="p-viewer" *ngIf="!showPass"  (click)="showPassword()">
+                <mat-icon >visibility_off</mat-icon></span>
+                <span class="err"  *ngIf="ownerSignUpForm.get('userName')?.touched" >Please Enter Password</span>
+                <mat-error>Password is <strong>required</strong></mat-error> 
+        </mat-form-field> <br>
+
+        <mat-form-field>
+            <mat-label>Confirm Password</mat-label>
+            <input [type]="showPass1 ? 'text' : 'password'" formControlName="password" matInput >
+            <span class="p-viewer" *ngIf="showPass1" (click)="showPassword1()">
+            <mat-icon   >visibility</mat-icon></span>
+
+            <span class="p-viewer" *ngIf="!showPass1"  (click)="showPassword1()">
+                <mat-icon >visibility_off</mat-icon></span>
+                <span class="err"  *ngIf="ownerSignUpForm.get('userName')?.touched" >Please Enter Password</span>
+                <mat-error>Confirm Password is <strong>required</strong></mat-error> 
+        </mat-form-field> <br>
+
+        <mat-form-field>
+            <mat-label>Mobile Number</mat-label>
+            <input type="text" matInput  formControlName="mobNumber" >
+            <span class="err" *ngIf=" ownerSignUpForm.get('mobNumber')?.errors?.['pattern']">Enter only
+                Numbers</span>
+        </mat-form-field> <br>
+        <mat-form-field>
+            <mat-label>Email Id</mat-label>
+            <input type="text" matInput formControlName="emailId">
+            <span class="err" *ngIf=" ownerSignUpForm.get('emailId')?.errors?.['pattern']">Enter vaild Id</span><br>
+        </mat-form-field> <br>
+        <mat-form-field>
+            <mat-label>Date Of Birth</mat-label>
+            <input type="date"  matInput formControlName="Dob">
+            <mat-icon class="date">date_range</mat-icon>
+        </mat-form-field><br>
+        <mat-form-field>
+            <mat-label>Pan Card</mat-label>
+            <input type="text" matInput formControlName="panCard" >
+        </mat-form-field> <br>
+        <mat-form-field>
+            <mat-label>City</mat-label>
+            <input type="text" matInput formControlName="city">
+        </mat-form-field> <br>
+
+        <mat-radio-group>
+            <mat-label>Gender</mat-label>
+            <mat-radio-button>Female</mat-radio-button>
+            <mat-radio-button>Male</mat-radio-button>
+        </mat-radio-group><br>
+
+        <button mat-raised-button color="accent" (click)="submit()">Submit</button>
+
+    </form>
+    
+</div>

@@ -11,14 +11,14 @@ export class LandingComponent {
 
 
   admin(){
-    this.router.navigateByUrl('adminMod/admin')
+    this.router.navigateByUrl('adminMod/admin-login')
   }
 
   owner(){
-    this.router.navigateByUrl('ownerMod/owner')
+    this.router.navigateByUrl('ownerMod/owner-login')
   }
 
   user(){
-    this.router.navigateByUrl('userMod/user')
+    this.router.navigateByUrl('userMod/user-login')
   }
 }

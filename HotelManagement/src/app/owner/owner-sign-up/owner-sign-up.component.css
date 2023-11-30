@@ -2,36 +2,36 @@
    
     background-image: url("/assets/image/hotel6 (1).jpg") ;
     width: 1500px;
-    height: 600px;
+    height: 900px;
 background-size: cover;
 
  color: aliceblue;
 
 
 }
-.head{
-    
-    margin-left:250px;
-}
+
 .container{
     border: 2px solid black   ;
     border-radius: 20px;
     
     position: relative;
-    width: 365px;
+    width: 300px;
+  
     padding: 11px 10px;
-    background-color: rgb(255, 250, 240);
+    background-color: rgb(178, 160, 221);
    font-family: 'Times New Roman', Times, serif ;
    font-style: italic,blood;
     text-align: center;
     margin-left:130px;
-    background-color: rgb(192, 255, 208);
-}
-.para{
-    color: black;
+    
 }
 .err{
     color: red;
+}
+
+.head{
+    
+    margin-left:220px;
 }
 
 .p-viewer{
@@ -39,6 +39,8 @@ background-size: cover;
     color: black;
     left:170px;
 }
-.field{
-    color:black
+.date{
+    position: absolute;
+    color: black;
+    left:170px;
 }

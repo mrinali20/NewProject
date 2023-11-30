@@ -1,0 +1,29 @@
+.main{
+   
+    background-image: url("/assets/image/hotel8 (2).jpg") ;
+    width: 1500px;
+    height: 900px;
+background-size: cover;
+ color: aliceblue;
+
+
+}
+
+.container{
+    border: 2px solid black   ;
+    border-radius: 20px;
+    
+    position: relative;
+    width: 300px;
+    padding: 11px 10px;
+    background-color: rgba(211, 72, 106, 0.877);
+   font-family: 'Times New Roman', Times, serif ;
+   font-style: italic,blood;
+    text-align: center;
+    margin-left:130px;
+   
+}
+.head{
+    
+    margin-left:180px;
+}

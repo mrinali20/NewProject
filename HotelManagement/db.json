@@ -1,0 +1,67 @@
+{
+  "owner": [
+    {
+      "userName": "aarav",
+      "mobNumber": "908766500",
+      "emailId": "aarav@gmail.com",
+      "password": "12345",
+      "Dob": "2021-03-25",
+      "panCard": "asd1234as",
+      "city": "pune"
+    },
+    {
+      "userName": "sonu",
+      "mobNumber": "908766500",
+      "emailId": "aarav@gmail.com",
+      "password": "12345",
+      "Dob": "2021-03-25",
+      "panCard": "asd1234as",
+      "city": "pune"
+    },
+    {
+      "userName": "minu",
+      "mobNumber": "890076541",
+      "emailId": "minu@gmail.com",
+      "password": "abc12",
+      "Dob": "1997-09-12",
+      "panCard": "asd2345rt",
+      "city": "mumbai",
+      "id": 3
+    },
+    {
+      "name": "monu",
+      "city": "Pune",
+      "id": 2
+    },
+    {
+      "userName": null,
+      "id": 4
+    },
+    {
+      "userName": null,
+      "id": 5
+    },
+    {
+      "userName": "",
+      "mobNumber": "",
+      "emailId": null,
+      "password": null,
+      "Dob": null,
+      "panCard": null,
+      "city": null,
+      "id": 6
+    },
+    {
+      "ownerName": null,
+      "id": 7
+    },
+    {
+      "ownerName": null,
+      "id": 8
+    },
+    {
+      "ownerName": null,
+      "id": 9
+    }
+  ]
+}

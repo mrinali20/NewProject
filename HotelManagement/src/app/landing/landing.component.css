@@ -1,12 +1,31 @@
 .main{
-    width: 2000px;
-    height: 800px;
+   
     background-image: url("/assets/image/hotel6 (2).jpg") ;
- color: aliceblue;
+    width: 1400px;
+    height: 700px;
+ color:beige;
+background-size: cover;
 
 
 }
 
 .button{
-    background-color: rgb(255, 0, 76);
+    /* background-color: rgb(255, 0, 119); */
+    margin-left: 900px;
+  
+   
+ 
 }
+
+
+.head{
+margin-top: 80px;
+margin-left: 400px;
+color:#970606;
+font-style: italic,bold;
+
+}
+.header{
+    color:yellowgreen
+}
+
