@@ -8,10 +8,14 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { HttpClientModule } from '@angular/common/http';
-
+import { SearchPipe } from '../search.pipe';
+import { firstValueFrom } from 'rxjs';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    SearchPipe
+  ],
+
   
   imports: [
     CommonModule,
@@ -23,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatToolbarModule,
     MatRadioModule,
     MatCheckboxModule,
-    HttpClientModule
+    HttpClientModule,
+   
    
   ],
   exports:[
@@ -35,7 +40,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatToolbarModule,
     MatRadioModule,
     MatCheckboxModule,
-    HttpClientModule
+    HttpClientModule,
+    SearchPipe
   ]
 })
 export class SharedModule { }

@@ -4,13 +4,13 @@
       "userName": "aarav",
       "mobNumber": "908766500",
       "emailId": "aarav@gmail.com",
-      "password": "12345",
+      "password": "ab@12345",
       "Dob": "2021-03-25",
       "panCard": "asd1234as",
       "city": "pune"
     },
     {
-      "userName": "sonu",
+      "userName": "nirav",
       "mobNumber": "908766500",
       "emailId": "aarav@gmail.com",
       "password": "12345",
@@ -19,7 +19,7 @@
       "city": "pune"
     },
     {
-      "userName": "minu",
+      "userName": "Tanu",
       "mobNumber": "890076541",
       "emailId": "minu@gmail.com",
       "password": "abc12",
@@ -27,41 +27,45 @@
       "panCard": "asd2345rt",
       "city": "mumbai",
       "id": 3
-    },
+    }
+    
+  ],
+  "user ": [
     {
       "name": "monu",
       "city": "Pune",
       "id": 2
-    },
-    {
-      "userName": null,
-      "id": 4
-    },
-    {
-      "userName": null,
-      "id": 5
-    },
-    {
-      "userName": "",
-      "mobNumber": "",
-      "emailId": null,
-      "password": null,
-      "Dob": null,
-      "panCard": null,
-      "city": null,
-      "id": 6
-    },
-    {
-      "ownerName": null,
-      "id": 7
-    },
-    {
-      "ownerName": null,
-      "id": 8
-    },
-    {
-      "ownerName": null,
-      "id": 9
     }
+  ],
+  "hotelDetails": [
+    {
+      "ownerName": "aarav",
+      "ownerNumber": "35645374",
+      "hotelName": "Taj Hotel",
+      "hotelAddress": "Mumbai",
+      "contactNumber": 9000876543,
+      "password": "abc@123",
+      "menu": null,
+      "id": 2
+    },
+    {
+      "ownerName": "nirav",
+      "ownerNumber": "35645374",
+      "hotelName": "Tatva Hotel",
+      "hotelAddress": "pune",
+      "contactNumber": 9000876543,
+      "password": "abc@123",
+      "menu": null,
+      "id": 3
+    },
+    {
+      "ownerName": "Tanu",
+      "ownerNumber": "935645374",
+      "hotelName": "Nisarag Hotel",
+      "hotelAddress": "Nagpur",
+      "contactNumber": 9000876543,
+      "password": "abc@123",
+      "menu": null,
+      "id": 3}
   ]
 }

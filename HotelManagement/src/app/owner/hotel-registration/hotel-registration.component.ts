@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApiServiceService } from 'src/app/Services/api-service.service';
 @Component({
@@ -9,7 +9,7 @@ import { ApiServiceService } from 'src/app/Services/api-service.service';
 })
 export class HotelRegistrationComponent {
   hotelRegisterForm: any;
-  endPoint="owner";
+  endPoint="hotelDetails";
 
   constructor(public router : Router,public fb : FormBuilder,public apiServiceService: ApiServiceService){}
   
@@ -20,7 +20,13 @@ export class HotelRegistrationComponent {
 
    formDetails(){
     this.hotelRegisterForm = this.fb.group({
-      ownerName :[],
+      ownerName :['',[Validators.maxLength(10),Validators.minLength(3),Validators.pattern("[a-zA-Z]+")]],
+      ownerNumber:['',[Validators.pattern("[0-9]+")]],
+      hotelName :[],
+      hotelAddress:[],
+      contactNumber:[],
+      password:[],
+      menu:[],
     })
   }
 
@@ -29,11 +35,11 @@ export class HotelRegistrationComponent {
     }
 
     hotelRegister(){
-
+      let endPoint= "hotelDetails"
       this.apiServiceService.postApiCall(this.endPoint,this.hotelRegisterForm.value).subscribe(res=>{ 
     console.log("responce::>>",res); 
     if(res){ 
-      alert('Data submitted Successfuly...!!'); 
+      alert('Hotel Register Successfuly...!!'); 
       this.router.navigateByUrl("ownerMod/owner-success"); 
     } 
   })

@@ -15,47 +15,53 @@
             <span class="err" *ngIf="hotelRegisterForm.get('ownerName')?.errors?.['minlength']">Minimum 4 character's
                 allowed</span>
         </mat-form-field><br>
+
         <mat-form-field>
             <mat-label>Owner Mobile Number</mat-label>
-            <input type="text" matInput>
+            <input type="text" matInput  formControlName="ownerNumber">
+            <mat-hint *ngIf="!hotelRegisterForm.get('ownerNumber')?.touched">Please Enter Owner Mobile Number </mat-hint>
+            <mat-error>Mobile Number is required</mat-error>
+            <span class="err" *ngIf="hotelRegisterForm.get('ownerNumber')?.error?.['pattern']">Only Number allowed</span>
         </mat-form-field><br>
         <mat-form-field>
             <mat-label>Enter  Hotel Name</mat-label>
-            <input type="text" matInput>
+            <input type="text" matInput formControlName="hotelName">
+            <mat-hint *ngIf="!hotelRegisterForm.get('hotelName')?.touched">Please Enter Hotel Name </mat-hint>
+            <span class="err" *ngIf="hotelRegisterForm.get('hotelName')?.error?.['pattern']" >Only alphabets allowed
+            </span>
         </mat-form-field><br>
         <mat-form-field>
             <mat-label>Enter  Hotel  Address</mat-label>
-            <input type="text" matInput>
+            <input type="text" matInput formControlName="hotelAddress">
+            <span class="err"  *ngIf="hotelRegisterForm.get('hotelAddress')?.error?.['minlength']">Minimum 4 character's allowed</span>
         </mat-form-field><br>
         <mat-form-field>
             <mat-label>Hotel Contact Number</mat-label>
-            <input type="text" matInput>
+            <input type="text" matInput formControlName="contactNumber" >
+            <span class="err" *ngIf="hotelRegisterForm.get('contactNumber')?.error?.['pattern']">Only Number allowed</span>
         </mat-form-field><br>
 
         <mat-form-field>
             <mat-label>Password</mat-label>
-            <input type="text" matInput>
+            <input type="text" matInput formControlName="password" >
         </mat-form-field><br>
         
 
         <mat-form-field> 
         <mat-label>Menu</mat-label>
-            <input type="text" matInput>
+            <input type="text" matInput formControlName='menu'>
+            <mat-error>Menu is required</mat-error>
         </mat-form-field><br>
         <mat-form-field> 
         <mat-label>Room Available</mat-label>
-        <select matNativeControl > 
+        <select matNativeControl  > 
             <option value="" selected></option> 
             <option value="1">1</option> 
             <option value="2">2</option> 
             <option value="3">3</option> 
             <option value="4">4</option> 
             <option value="5">5</option> 
-            <option value="6">6</option> 
-            <option value="7">7</option> 
-            <option value="8">8</option> 
-            <option value="9">9</option> 
-            <option value="10">10</option> 
+            
           </select> 
     </mat-form-field><br>
 

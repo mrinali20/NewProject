@@ -9,17 +9,20 @@ import { OwnerSuccessComponent } from './owner-success/owner-success.component';
 import { HotelRegistrationComponent } from './hotel-registration/hotel-registration.component';
 
 
+
 @NgModule({
   declarations: [
     OwnerLoginComponent,
     OwnerSignUpComponent,
     OwnerSuccessComponent,
-    HotelRegistrationComponent
+    HotelRegistrationComponent,
+   
   ],
   imports: [
     CommonModule,
     OwnerRoutingModule,
-    SharedModule
+    SharedModule,
+  
 
   ]
 })

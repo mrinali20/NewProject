@@ -1,75 +1,80 @@
-
 <div class="main">
     <button mat-raised-button color="warn" (click)="back()">Back</button>
     <h2 class="head">SignUp-Form</h2>
     <form class="container" [formGroup]="ownerSignUpForm">
         <mat-form-field>
             <mat-label>User Name</mat-label>
-            <input type="text" matInput formControlName="userName" >
+            <input type="text" matInput formControlName="userName">
             <span class="err" *ngIf="ownerSignUpForm.get('userName')?.errors?.['maxlength']">Maximum 10 character's
                 allowed</span>
             <span class="err" *ngIf="ownerSignUpForm.get('userName')?.errors?.['minlength']">Minimum 3 character's
                 allowed</span>
-    
+
         </mat-form-field> <br>
 
         <mat-form-field>
             <mat-label>Password</mat-label>
-            <input [type]="showPass ? 'text' : 'password'" formControlName="password" matInput >
+            <input [type]="showPass ? 'text' : 'password'" formControlName="password" matInput>
             <span class="p-viewer" *ngIf="showPass" (click)="showPassword()">
-            <mat-icon   >visibility</mat-icon></span>
+                <mat-icon>visibility</mat-icon></span>
 
-            <span class="p-viewer" *ngIf="!showPass"  (click)="showPassword()">
-                <mat-icon >visibility_off</mat-icon></span>
-                <span class="err"  *ngIf="ownerSignUpForm.get('userName')?.touched" >Please Enter Password</span>
-                <mat-error>Password is <strong>required</strong></mat-error> 
+            <span class="p-viewer" *ngIf="!showPass" (click)="showPassword()">
+                <mat-icon>visibility_off</mat-icon></span>
+            <span class="err" *ngIf="ownerSignUpForm.get('userName')?.touched">Please Enter Password</span>
+
         </mat-form-field> <br>
 
         <mat-form-field>
             <mat-label>Confirm Password</mat-label>
-            <input [type]="showPass1 ? 'text' : 'password'" formControlName="password" matInput >
+            <input [type]="showPass1 ? 'text' : 'password'" formControlName="password" matInput>
             <span class="p-viewer" *ngIf="showPass1" (click)="showPassword1()">
-            <mat-icon   >visibility</mat-icon></span>
+                <mat-icon>visibility</mat-icon></span>
 
-            <span class="p-viewer" *ngIf="!showPass1"  (click)="showPassword1()">
-                <mat-icon >visibility_off</mat-icon></span>
-                <span class="err"  *ngIf="ownerSignUpForm.get('userName')?.touched" >Please Enter Password</span>
-                <mat-error>Confirm Password is <strong>required</strong></mat-error> 
+            <span class="p-viewer" *ngIf="!showPass1" (click)="showPassword1()">
+                <mat-icon>visibility_off</mat-icon></span>
+            <span class="err" *ngIf="ownerSignUpForm.get('userName')?.touched">Please Enter Password</span>
+
         </mat-form-field> <br>
 
         <mat-form-field>
             <mat-label>Mobile Number</mat-label>
-            <input type="text" matInput  formControlName="mobNumber" >
+            <input type="text" matInput formControlName="mobNumber">
             <span class="err" *ngIf=" ownerSignUpForm.get('mobNumber')?.errors?.['pattern']">Enter only
                 Numbers</span>
         </mat-form-field> <br>
         <mat-form-field>
             <mat-label>Email Id</mat-label>
             <input type="text" matInput formControlName="emailId">
-            <span class="err" *ngIf=" ownerSignUpForm.get('emailId')?.errors?.['pattern']">Enter vaild Id</span><br>
+            <span class="err" *ngIf=" ownerSignUpForm.get('emailId')?.errors?.['pattern']">Enter vaild Email
+                Id</span><br>
         </mat-form-field> <br>
         <mat-form-field>
             <mat-label>Date Of Birth</mat-label>
-            <input type="date"  matInput formControlName="Dob">
+            <input type="date" matInput formControlName="Dob">
             <mat-icon class="date">date_range</mat-icon>
         </mat-form-field><br>
         <mat-form-field>
             <mat-label>Pan Card</mat-label>
-            <input type="text" matInput formControlName="panCard" >
+            <input type="text" matInput formControlName="panCard">
+            <span class="err" *ngIf=" ownerSignUpForm.get('panCard')?.errors?.['pattern']">Enter vaild
+                PanCard</span><br>
         </mat-form-field> <br>
         <mat-form-field>
             <mat-label>City</mat-label>
             <input type="text" matInput formControlName="city">
+            <span class="err" *ngIf=" ownerSignUpForm.get('city')?.errors?.['pattern']">Enter valid City Name</span><br>
         </mat-form-field> <br>
 
         <mat-radio-group>
             <mat-label>Gender</mat-label>
-            <mat-radio-button>Female</mat-radio-button>
-            <mat-radio-button>Male</mat-radio-button>
+            <mat-radio-button   value="male" >Female</mat-radio-button>
+            <mat-radio-button  value="female" >Male</mat-radio-button>
+            <!-- <mat-error>please select Gender</mat-error> -->
+            <!-- <mat-hint>please select gender</mat-hint> -->
+            <!-- <div class="err" *ngIf="isGenderSelected ">please select gender</div> -->
         </mat-radio-group><br>
 
         <button mat-raised-button color="accent" (click)="submit()">Submit</button>
 
     </form>
-    
 </div>

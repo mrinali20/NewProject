@@ -1,5 +1,22 @@
 <div class="main">
     <button mat-raised-button color="warn" (click)="back()">Back</button>
     <button mat-raised-button color="warn"  (click)="Registration()" >New Hotel Registration</button>
-    <button mat-raised-button color="warn"   >My Hotel List</button>
+    <button mat-raised-button color="warn" (click)="showHotelList()"  >Hotel List</button>
+</div>
+<div *ngIf="showRecord">
+    
+    <table>
+       <tr>
+        <th *ngFor="let heading of headings"></th>
+       </tr> 
+       <tr *ngFor ="let data of hotelDetailsByOwner  | search : searchText">
+        <td>{{data.hotelName}}</td>
+        <td>{{data.hotelAdress}}</td>
+        <td>{{data.hotelNumber}}</td>
+        <td>{{data.hotelMenu}}</td>
+        <td>{{data.rooms}}</td>
+        <td><mat-icon (click)="edit(data.id)">create</mat-icon></td>
+            <td><mat-icon (click)="delete(data.id)">delete</mat-icon></td>
+       </tr>
+    </table>
 </div>

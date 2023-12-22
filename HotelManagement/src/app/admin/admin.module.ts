@@ -5,6 +5,7 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminSignUpComponent } from './admin-sign-up/admin-sign-up.component';
 import { AdminSuccessComponent } from './admin-success/admin-success.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { AdminSuccessComponent } from './admin-success/admin-success.component';
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    // SharedModule
   ]
 })
 export class AdminModule { }

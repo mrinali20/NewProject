@@ -12,6 +12,7 @@ export class OwnerSignUpComponent {
   showPass=false;
   showPass1=false;
   endPoint:string = "owner";
+  isGenderSelected : boolean=false;
 
 
 
@@ -28,15 +29,18 @@ ngOnInit(){
    userName :['',[ Validators.maxLength(10),Validators.minLength(3)]],
    mobNumber :['',[Validators.maxLength(10),Validators.pattern("[0-9]+")]],
    emailId:[ ,[Validators.pattern(/^[a-zA-Z0-9._%+_]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)]],
-   password:[],
+   password:[,[Validators.pattern("(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*_=+-]).{8,}")]],
    Dob : [],
-   panCard:[],
-   city:[]
-
+   panCard:[,[Validators.pattern(/^[A-Za-z]{5}\d{4}[A-Za-z]{1}$/)]],
+   city:[,[Validators.pattern("[A-Za-z]{2}")]],
+   gender:[]
 
   })
  }
 
+ gender(){
+  this.isGenderSelected = false;
+  }
 
  back(){
   this.router.navigateByUrl("ownerMod/owner-login")

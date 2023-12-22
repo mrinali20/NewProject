@@ -16,7 +16,7 @@ background-size: cover;
     position: relative;
     width: 300px;
     padding: 11px 10px;
-    background-color: rgba(211, 72, 106, 0.877);
+    background-color: rgba(66, 43, 49, 0.877);
    font-family: 'Times New Roman', Times, serif ;
    font-style: italic,blood;
     text-align: center;
@@ -26,4 +26,8 @@ background-size: cover;
 .head{
     
     margin-left:180px;
+}
+
+.err{
+    color: red;
 }

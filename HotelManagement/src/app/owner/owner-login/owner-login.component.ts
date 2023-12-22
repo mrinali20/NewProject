@@ -48,6 +48,7 @@ login(){
     })
   }
   if(matchedObj){
+    this.apiServiceService.ownerName = this.ownerLoginForm.value.userName;
     this.router.navigateByUrl("ownerMod/owner-success")
   }
   
